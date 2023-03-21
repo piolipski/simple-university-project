@@ -1,1 +1,1 @@
-A very simple university project which helped me pass the one of the classes.
+A very simple university project which helped me pass one of the classes.
