@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> all & nothing </title>
+		<link rel="stylesheet" href="CSS/index.css" type="text/css" />
+		<link rel="stylesheet" href="CSS/todo.css" type="text/css" />
+		<link rel="stylesheet" href="CSS/contact.css" type="text/css" />
+		<link rel="stylesheet" href="CSS/main.css" type="text/css" />
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+	</head>
+	
+	<body>
+		<header>
+			<div class="logo">
+				<h1><a href="index.html">ALL & NOTHING</a></h1>
+			</div>
+			
+			<nav class="navbar">
+				<div class="brand-title"><a href="index.html">ALL & NOTHING</a></div>
+				<a class="toggle-button">
+					<i class="fa-solid fa-bars"></i>
+				</a>
+				<div class="navbar-links">
+					<ul>
+						<li>
+							<a href="#main">STRONA GŁÓWNA</a>
+						</li>
+						<li>
+							<a href="#todo">NOTATNIK</a>
+						</li>
+						<li>
+							<a href="#contact">KONTAKT</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+	
+		<main>
+			<div id="sites">
+				<div id="main">
+					<div class="welcome">
+						<h1>Witaj na mojej stronie</h1>
+						<p>Znajdziesz tutaj kilka ciekawych rzeczy, które mogą Ci się spodobać :)</p>
+					</div>
+					
+					<div class="weather-text">
+						<p>Chcesz sprawdzić pogodę? Nic prostszego!</p>
+						<p>Musisz tylko wpisać nazwę miasta!</p>
+					</div>
+					
+					<div class="input">
+						<input type="text" placeholder="Wpisz miasto" class="input_text">
+							<div id="error-hint-weather" class="hidden">Niepoprawne miasto!</div>
+						<input type="submit" value="Sprawdź" class="submit">
+					</div>
+					
+					<div class="weather-background-style">
+						<div class="weather-background th-hidden">
+							<div class="weather-text-styling">
+								<h1 id="city-name"></h1>
+								<p class="temp"></p>
+								<p class="clouds"></p>
+								<p class="pressure"></p>
+								<p class="wind"></p>
+								<p class="humidity"></p>
+								<p class="desc"></p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="animals-text">
+						<p>A może chcesz zobaczyć słodkie zdjęcie?</p>
+						<p>Musisz tylko nacisnąć!</p>
+					</div>
+					
+					<div class="animals-button-div">
+						<button id="animals-button">Wciśnij mnie</button>
+					</div>
+					<div id="error-hint-animals" class="hidden">Niestety, wkradł się błąd!</div>
+					
+					<div class="results th-hidden">
+						<div id="animals_result" class="result th-hidden"></div>
+					</div>
+				</div>
+				
+				<div id="contact">
+					<div class="contact-text">
+						<h1>Skontaktuj się z nami!</h1>
+						<p>Musisz tylko wypełnić ten krótki formularz.</p>
+					</div>
+					
+					<form action="mailto:example@example.com" method="POST" name="contact-form">
+						<input type="text" id="name" name="name" placeholder="Nazwa">
+							<div id="error-hint-name" class="hidden">Pole nazwa jest wymagane</div>
+						<input type="email" id="email" name="email" placeholder="E-mail">
+							<div id="error-hint-email" class="hidden">Pole e-mail jest wymagane</div>
+							
+						<p class="p-status">STATUS</p>	
+						<div class="status-info">
+							<div class="input-line">
+								<input type="radio" id="student" name="status" value="student">
+									<label for="student">STUDENT</label>
+							</div>
+							<div class="input-line">
+								<input type="radio" id="zatrudniony" name="status" value="zatrudniony">
+									<label for="zatrudniony">ZATRUDNIONY</label>	
+							</div>
+							<div class="input-line">
+								<input type="radio" id="bezrobotny" name="status" value="bezrobotny">
+									<label for="bezrobotny">BEZROBOTNY</label>
+							</div>
+						</div>
+							<div id="error-hint-status" class="hidden">Pole status nie może być puste</div>
+							
+						<div class="problem-info">
+							<select size="1" id="problem" name="problem">
+								<option disabled selected value="">Forma kontaktu</option>
+								<option value="PROBLEM">Problemy ze stroną</option>
+								<option value="MONETIZATION">Monetyzacja strony</option>
+								<option value="ADS">Reklamy na stronie</option>
+								<option value="INAPPROPRIATE-CONTENT">Nieodpowiednie treści</option>
+								<option value="DONATION">Dotacja na rozwój projektu</option>
+							</select>
+						</div>
+							<div id="error-hint-problem" class="hidden">Wybierz formę kontaktu</div>
+							
+						<textarea id="message" name="message" rows="4" placeholder="Wiadomość..."></textarea>
+							<div id="error-hint-message" class="hidden">Wiadomośc jest wymagana</div>
+							
+						<div class="buttons">
+							<button type="button" id="send">WYŚLIJ</button>
+							<button type="reset" id="reset">WYCZYŚĆ</button>						
+						</div>
+					</form>
+					
+					<div class="thank-you th-hidden">
+						<h1>Formularz został wysłany</h1>
+						<p>Dziękujemy!</p>
+					</div>
+				</div>
+			
+				<div id="todo">
+					<div class="some-text">
+						<h1>Notatnik, który pozwoli Ci zapisać swoje przemyślenia</h1>
+						<p>I wiele więcej!</p>
+					</div>
+					
+					<div id="notesContainer">
+						<article>
+							<input placeholder="Dodaj notkę..." id="newNote">
+							<button id="addNoteButton">dodaj</button>
+						</article>
+							<template id="noteTemplate">
+								<article>
+									<input class="noteInput" placeholder="Nie zostawiaj mnie samego!">
+									<button class="removeBtn">usuń</button>
+								</article>
+						</template>
+					</div>
+				</div>
+				
+				<div id="not-found">
+					<h1>Oops!</h1>
+					<p>404 - nie znaleziono strony</p>
+				</div>
+			</div>
+		</main>	
+		
+		<footer>
+			<p>2022 &copy; Piotr Lipski</p> 
+		</footer>
+		
+		<script src="javascript/dogsFetch.js"></script>
+		<script src="javascript/formValidation.js"></script>
+		<script src="javascript/note.js"></script>
+		<script src="javascript/responsiveness.js"></script>
+		<script src="javascript/singlePageApplication.js"></script>
+		<script src="javascript/weatherFetch.js"></script>
+	</body>
+</html>

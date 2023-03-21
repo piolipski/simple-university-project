@@ -1,0 +1,113 @@
+/* TO DO LIST */
+
+.todo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#notesContainer article {
+    background-color: #fdd478;
+    display: flex;
+    align-items: center;
+}
+    
+#notesContainer article input {
+    margin: 0;
+    padding: 1em;
+    outline: none;
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+    
+#notesContainer article input::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+}
+    
+#notesContainer article:not(:last-child) {
+    border-bottom: 2px solid #d7b465;
+}
+    
+#notesContainer article button {
+	margin: 1em;
+}
+
+/* BUTTONS */
+
+#addNoteButton {
+	border: none;
+	padding: 0.5em;
+	box-shadow: 0px 0px 30px -10px rgba(66, 68, 90, 1);
+}
+
+.removeBtn {
+	border: none;
+	padding: 0.5em;
+	box-shadow: 0px 0px 30px -10px rgba(66, 68, 90, 1);
+}
+
+#addNoteButton, .removeBtn {
+	background: white;
+}
+
+#addNoteButton:hover, .removeBtn:hover {
+	background: #f2f2f2;
+}
+
+/* TEXT */
+
+.some-text {
+	text-align: center;
+	color: white;
+}
+
+.some-text h1 {
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+
+.some-text p {
+	font-size: 1.5em;
+	margin-top: 0;
+}
+
+/* RESPONSIVENESS OF TODO */
+
+@media screen and (max-width: 740px) {
+	.some-text h1 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	#notesContainer article input {
+		padding: 0.5em;
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	#notesContainer article input {
+		font-size: 0.7em;
+		margin: 1.3em 0 1.3em 0;
+	}
+	
+	.some-text h1 {
+		font-size: 1.3em;
+	}
+
+	.some-text p {
+		font-size: 1em;
+	}
+	
+	#addNoteButton {
+		font-size: 0.7em;
+	}
+	
+	.removeBtn {
+		font-size: 0.7em;
+	}
+}

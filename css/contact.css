@@ -1,0 +1,180 @@
+/* CONTACT TEXT */
+
+#contact h1 {
+	color: white;
+	text-align: center;
+	margin: 1em 0 0 0;
+}
+
+#contact p:not(form p) {
+	font-size: 1em;
+	color: white;
+	text-align: center;
+	margin: 0 0 1em 0;
+}
+
+/* CONTACT FORM */
+
+form {
+	margin-top: 2em;
+	background: #DEDEE3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2vw 4vw;
+	border-radius: 10px;
+}
+
+form p {
+	text-align: center;
+	margin: 0;
+	font-size: 1.5em;
+}
+
+form input, form textarea, form select {
+	border: 0;
+	margin: 1em 0 0 0;
+	padding: 1.15em;
+	outline: none;
+	background: #f5f5f5;
+	font-size: 1em;
+}
+
+form select {
+	width: 100%;
+}
+
+.status-info {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+
+.status-info input {
+	margin-left: 1em;
+}
+
+.p-status {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+/* THANK YOU */
+
+.thank-you {
+	margin-top: 20em;
+	color: red;
+	display: flex;
+	flex-direction: column;
+}
+
+.thank-you h1 {
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+}
+
+.thank-you p {
+	text-align: center;
+	margin: 0;
+}
+
+/* FORM BUTTONS */
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.buttons button {
+	padding: 14px;
+	color: black;
+	font-size: 18px;
+	border: 0;
+	outline: none;
+	margin: 0.3em;
+	width: 150px;
+	border-radius: 10px;
+}
+
+button#send {
+	background: #41d936;
+}
+
+button#send:hover {
+	background: #2ea326;
+}
+
+button#reset {
+	background: #f04a3e;
+}
+
+button#reset:hover {
+	background: #8a2720
+}
+
+/* HIDDEN & ERROR */
+
+.hidden {
+	visibility: hidden;
+}
+
+.th-hidden {
+	display: none;
+}
+
+#error-hint-name, #error-hint-email, #error-hint-status,
+#error-hint-problem, #error-hint-message {
+	font-size: 0.9em;
+	color: red;
+}
+
+#error-hint-status {
+	text-align: center;
+}
+
+/* RESPONSIVNENESS OF FORM */
+
+@media screen and (max-width: 740px) {
+	.input-line label {
+		margin-left: 1em;
+	}
+	
+	.status-info {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.buttons button {
+		width: 100px;
+		font-size: 0.8em;
+	}
+	
+	.thank-you {
+		margin-top: 15em;
+	}	
+	
+	#error-hint-name, #error-hint-email, #error-hint-status,
+	#error-hint-problem, #error-hint-message {
+		font-size: 0.7em;
+	}
+
+	.thank-you h1 {
+		font-size: 1.5em;
+	}
+
+	.thank-you p {
+		font-size: 1em;
+	}
+	
+	form input, form textarea, form select {
+		margin: 0.5em 0 0 0;
+		padding: 1em;
+		font-size: 0.9em;
+	}
+}

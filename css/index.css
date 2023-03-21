@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body { 
+	display: flex;
+	flex-direction: column;
+	background: #292930;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+	user-select: none;
+}
+
+.logo h1 {
+	padding: 0.3em;
+	margin: 0;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	letter-spacing: 2px;
+	font-size: 3em;
+}
+
+.logo a {
+	text-decoration: none;
+	color: black;
+}
+
+/* NAVIGATION BAR */
+
+header {
+	background-color: #F4F4F6 /*#32064A; */
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+	background-color: #717184;
+	color: white;
+}
+
+.brand-title {
+	font-size: 1.5rem;
+	margin: 0.5rem;
+}
+
+.brand-title a {
+	text-decoration: none;
+	color: white;
+}
+
+.navbar-links ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-width: 100%;
+}
+
+.navbar-links li {
+	list-style: none;
+	position: relative;
+}
+
+.navbar-links li a {
+	text-decoration: none;
+	color: white;
+	padding: 1rem;
+	display: block;
+	font-weight: bold;
+	user-select: none;
+}
+
+.navbar-links li:hover {
+	background-color: #5E5E6E;
+}
+
+.toggle-button {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.brand-title {
+	user-select: none;
+	display: none;
+	font-family: 'Lobster', cursive;
+}
+
+.toggle-button i {
+	color: white;
+}
+
+.toggle-button:hover {
+	cursor: pointer;
+}
+
+.fa-solid.fa-bars:before {
+	font-size: 1.4em;
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar li > ul {
+	display: none;
+	position: absolute;
+}
+
+li:hover > ul {
+	background-color: red;
+	display: block;
+}
+
+/* FOOTER */
+footer {
+	margin-top: auto;
+}
+
+footer p {
+	font-size: 0.8em;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+#not-found h1 {
+	color: white;
+	margin: 1.5em 0 0 0;
+	text-align: center;
+	font-size: 10em;
+}
+
+#not-found p {
+	color: white;
+	margin: 0;
+	font-size: 3em;
+}
+
+/* RESPONSIVNENESS OF NAVBAR */
+
+@media screen and (max-width: 740px) {	
+	.toggle-button {
+		display: flex;
+	}
+	
+	.navbar-links {
+		display: none;
+		width: 100%;
+	}
+	
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.brand-title {
+		padding: 0.5em;
+	}
+	
+	.toggle-button {
+		padding: 0.7em;
+	}
+	
+	.navbar-links ul {
+		width: 100%;
+		flex-direction: column;
+	}
+	
+	.navbar-links li {
+		padding: 0.5em;
+		background: #676779;
+		text-align: center;
+	}
+	
+	.navbar-links li a {
+		padding: 0.5rem 1rem;
+	}
+	
+	.navbar-links.active {
+		display: flex;
+	}
+	
+	.brand-title {
+		display: flex;
+	}
+	
+	.logo {
+		display: none;
+	}
+	
+	.navbar li > ul:hover {
+		display: flex;
+	}
+}
+
+/* RESPONSIVNENESS OF 404 */
+
+@media screen and (max-width: 740px) {
+	#not-found h1 {
+		margin: 4em 0 0 0;
+		font-size: 5em;
+	}
+
+	#not-found p {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.navbar-links li {
+		padding: 0.3em;
+		background: #676779;
+		text-align: center;
+	}
+	
+	.brand-title {
+		padding: 0.3em;
+	}
+	
+	.toggle-button {
+		padding: 0.5em;
+	}
+	
+	#not-found h1 {
+		margin: 8.5em 0 0 0;
+		font-size: 2.5em;
+	}
+
+	#not-found p {
+		font-size: 0.75em;
+	}
+}
